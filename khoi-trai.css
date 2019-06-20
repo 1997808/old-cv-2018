@@ -1,0 +1,72 @@
+.left-container {
+    width: 660px;
+}
+
+.left-container .hai-khoi-dau .khoi-trai {
+    width: 435px;
+}
+
+.left-container .hai-khoi-dau .khoi-trai h2 {
+    margin-top: 12px;
+}
+
+.left-container .hai-khoi-dau .khoi-trai p {
+    margin: 10px 0;
+}
+
+.left-container .hai-khoi-dau {
+    display: flex;
+}
+
+.left-container .hai-khoi-dau .khoi-phai {
+    width: 205px;
+    margin-left: 20px;
+}
+
+.left-container .hai-khoi-dau .khoi-phai h3 {
+    background: #ebebeb;
+    padding: 12px 15px 20px;
+}
+
+.bai-viet {
+    overflow: hidden;
+    padding: 25px 0;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.bai-viet .anh-bai-viet {
+    float: left;
+    margin-right: 20px;
+}
+
+.bai-viet .tieu-de-bai-viet {
+    float: left;
+    width: 390px;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+.bai-viet div {
+    margin-bottom: 10px;
+}
+
+.bai-viet div a {
+    display: inline;
+    font-size: 14px;
+    color: #393c54;
+}
+
+.bai-viet div span {
+    font-size: 14px;
+    color: #8e8e8e;
+}
+
+.bai-viet p {
+    font-size: 13px;
+    font-family: Arial;
+    color: #555;
+    line-height: 19px;
+}
+
+.tat-ca-bai-viet {
+    border-top: 4px solid #ed2e2e;
+}
