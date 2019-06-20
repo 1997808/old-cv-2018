@@ -1,0 +1,89 @@
+.khoi-duoi {
+    width: 710px;
+    height: 581px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.khoi-duoi .dang-chu-y {
+    width: 400px;
+    float: left;
+}
+
+.khoi-duoi .khung-trong-dang-chu-y {
+    width: 380px;
+}
+
+.khoi-duoi .my-genk {
+    width: 310px;
+    height: 581px;
+    float: left;
+    background: #f0f1f5;
+}
+
+.dang-chu-y h3 {
+    margin: 20px 0px;
+    padding-left: 20px;
+}
+
+.dang-chu-y a img {
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.dang-chu-y h4 {
+    font-size: 22px;
+    line-height: 28px;
+    display: block;
+    margin: 7px 0px;
+}
+
+.dang-chu-y p {
+    font-family: Arial;
+    font-size: 13px;
+    line-height: 18px;
+    display: block;
+    padding: 15px 20px 0px 0px;
+    border-top: 1px solid #ebebeb;
+    margin: 6px 0px 0px 0px;
+}
+
+.khoi-duoi .khung-trong-my-genk {
+    width: 270px;
+    padding-left: 20px;
+}
+
+.my-genk h3 {
+    margin: 20px 0px;
+}
+
+.my-genk .bai-viet-to div {
+    overflow: hidden;
+    width: 270px;
+    margin: 6px 0px 0px 0px;
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+}
+
+.my-genk .bai-viet-to div h4 {
+    width: 180px;
+    float: left;
+}
+
+.my-genk .bai-viet-to div img {
+    width: 80px;
+    height: auto;
+    border: 1px solid rgba(0,0,0,0.05);
+    float: right;
+}
+
+.my-genk {
+    
+}
+
+.my-genk p {
+    width: 270px;
+    font-size: 15px;
+    font-family: 'Segoe UI';
+    margin: 6px 0px 0px 0px;
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+}
