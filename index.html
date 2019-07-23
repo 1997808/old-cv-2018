@@ -5,198 +5,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/khoi-trai.css">
-    <link rel="stylesheet" href="css/blockmoi.css">
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #222;
+        }
+
+        .khung {
+            background: #aaa; 
+            border: .5px solid #222;
+            width: 400px; 
+            height: 600px;
+            margin: auto;
+            margin-top: 50px;
+            border-radius: 40px;
+            overflow: hidden;
+        }
+
+        .khung .phanTren {
+            height: 200px;
+            border-bottom: .5px solid #222; 
+            padding: 10px;
+            font-size: 30px;
+        }
+
+        .khung .phanDuoi {
+            height: 400px;
+            overflow: hidden;
+            display: flex;
+            font-size: 40px;
+            font-family: 'Segoe UI';
+            text-align: center;
+        }
+
+        .khung .phanTren .congThuc {
+            height: 80px;
+        }
+
+        .khung .phanTren .ketQua {
+            height: 100px;
+        }
+
+        .khung .phanDuoi .so {
+            height: 400px;
+            width: 300px;
+            border-right: .5px solid #222;
+            background: #444;
+        }
+
+        .khung .phanDuoi .chucNang {
+            height: 400px;
+            width: 100px;
+            background: #0084ff;
+        }
+
+        .khung .phanDuoi .so ul {
+            display: flex;
+            flex-flow: wrap;
+        }
+
+        .khung .phanDuoi .so ul li {
+            height: 100px;
+            width: 99.5px;
+            color: #ddd;
+            padding-top: 20px;
+        }
+
+        .khung .phanDuoi .chucNang ul li {
+            height: 80px;
+            width: 99.5px;
+            font-size: 30px;
+            color: #ddd;
+            border-bottom: .5px solid #3d92ca;
+            padding-top: 15px;
+        }
+
+        .khung .phanDuoi .chucNang ul li img {
+            height: 40px;
+            vertical-align: middle;
+        }
+
+    </style>
 </head>
 <body>
-    <!-- header -->
-    <div class="header">
-        <div class="header-content">
-            <h1>
-                <a href=""></a>  
-            </h1>
+    <div class="khung">
+        <div class="phanTren">
+            <div class="congThuc">
 
-            <ul>
-                <li><a href="">MOBILE</a></li>
-                <li><a href="">TIN ICT</a></li>
-                <li><a href="">INTERNET</a></li>
-                <li><a href="">KHÁM PHÁ</a></li>
-                <li></li>
-            </ul>
+            </div>
+            <div class="ketQua">
 
-            <div class="right-block">
-                <a href="">VIDEO</a>
-                <div class="search-icon"></div> 
+            </div>
+        </div>
+        <div class="phanDuoi">
+            <div class="so">
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>0</li>
+                    <li>.</li>
+                    <li>=</li>
+                </ul>
+            </div>
+            <div class="chucNang">
+                <ul>
+                    <li>
+                        <img src="https://cdn3.iconfinder.com/data/icons/common-3/100/ui_backspace-512.png" alt="">
+                    </li>
+                    <li>/</li>
+                    <li>*</li>
+                    <li>-</li>
+                    <li>+</li>
+                </ul>
             </div>
         </div>
     </div>
-    <!-- end header -->
 
-    <div class="khoi-quang-cao-to">
-        <div></div>
-    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var a;
+            var kq;
+            var i;
 
-    <!-- noi dung -->
-    <div class="content-container">
-
-        <!-- khoi trai -->
-        <div class="left-container">
-            <div class="hai-khoi-dau">
-                <div class="khoi-trai">
-                    <a href="http://genk.vn/neu-da-chan-windows-hay-mac-ban-co-the-thu-ngay-phien-ban-he-dieu-hanh-linux-cuc-ky-than-thien-voi-nguoi-dung-nay-20190618143509905.chn">
-                        <img src="https://genknews.genkcdn.vn/zoom/470_289/2019/6/18/photo-1-1560843187513997459800-crop-15608432617661330876793.jpg" alt="">
-                        <h2>Nếu đã chán Windows hay Mac, bạn có thể thử ngay phiên bản hệ điều hành Linux cực kỳ thân thiện với người dùng này</h2>
-                    </a>
-                    <p>
-                        Mặc dù Zorin OS 15 được xây dựng dựa trên nền tảng Linux, nhưng nó đã được tùy biến để phù hợp với những người mới bắt đầu, tập trung vào sự đơn giản và dễ sử dụng.
-                    </p>
-                </div>
-
-                <div class="khoi-phai">
-                    <a href="">
-                            <img src="https://genknews.genkcdn.vn/zoom/222_289/2019/6/18/dscf3839-1560795319086649071396-crop-156079533016751663034.jpg" alt="">
-                            <h3>Hướng dẫn cài đặt iOS 13 & iPadOS 13 Beta bằng profile chính chủ của Apple, không cần đến máy tính</h3>   
-                    </a>
-                </div>
-            </div>
-
-
-            <div class='tat-ca-bai-viet'>
-
-                <!-- bai viet -->
-                <div class="bai-viet">
-                    <a class="anh-bai-viet" href="http://genk.vn/mau-nao-cua-vinfast-fadil-duoc-yeu-thich-nhat-20190618170429436.chn">
-                        <img src="https://genknews.genkcdn.vn/zoom/250_155/2019/2019-photo-9-1560849805800240805923-15-0-414-640-crop-1560849915346-636964742697181562.png" alt="">
-                    </a>
-                    <a class="tieu-de-bai-viet" href="http://genk.vn/mau-nao-cua-vinfast-fadil-duoc-yeu-thich-nhat-20190618170429436.chn">
-                        <h3>Màu nào của VinFast Fadil được yêu thích nhất?</h3>
-                    </a>
-                    
-                    <div>
-                        <a href="">Sống</a>
-                        <span>-</span>  
-                        <span>2 giờ trước</span>
-                    </div>
-
-                    <p>Không khó để nhận ra tông màu ngoại thất nào được ưa chuộng nhất bởi các chủ xe đã đặt cọc mua Fadil từ...</p>
-                </div>
-                <!-- het bai viet -->
-
-                <!-- bai viet -->
-                <div class="bai-viet">
-                        <a class="anh-bai-viet" href="http://genk.vn/mau-nao-cua-vinfast-fadil-duoc-yeu-thich-nhat-20190618170429436.chn">
-                            <img src="https://genknews.genkcdn.vn/zoom/250_155/2019/2019-photo-9-1560849805800240805923-15-0-414-640-crop-1560849915346-636964742697181562.png" alt="">
-                        </a>
-                        <a class="tieu-de-bai-viet" href="http://genk.vn/mau-nao-cua-vinfast-fadil-duoc-yeu-thich-nhat-20190618170429436.chn">
-                            <h3>Màu nào của VinFast Fadil được yêu thích nhất?</h3>
-                        </a>
-                        
-                        <div>
-                            <a href="">Sống</a>
-                            <span>-</span>  
-                            <span>2 giờ trước</span>
-                        </div>
-        
-                        <p>Không khó để nhận ra tông màu ngoại thất nào được ưa chuộng nhất bởi các chủ xe đã đặt cọc mua Fadil từ...</p>
-                    </div>
-                    <!-- het bai viet -->
-
-                    <!-- bai viet -->
-                <div class="bai-viet">
-                        <a class="anh-bai-viet" href="http://genk.vn/mau-nao-cua-vinfast-fadil-duoc-yeu-thich-nhat-20190618170429436.chn">
-                            <img src="https://genknews.genkcdn.vn/zoom/250_155/2019/2019-photo-9-1560849805800240805923-15-0-414-640-crop-1560849915346-636964742697181562.png" alt="">
-                        </a>
-                        <a class="tieu-de-bai-viet" href="http://genk.vn/mau-nao-cua-vinfast-fadil-duoc-yeu-thich-nhat-20190618170429436.chn">
-                            <h3>Màu nào của VinFast Fadil được yêu thích nhất?</h3>
-                        </a>
-                        
-                        <div>
-                            <a href="">Sống</a>
-                            <span>-</span>  
-                            <span>2 giờ trước</span>
-                        </div>
-        
-                        <p>Không khó để nhận ra tông màu ngoại thất nào được ưa chuộng nhất bởi các chủ xe đã đặt cọc mua Fadil từ...</p>
-                    </div>
-                    <!-- het bai viet -->
-
-            </div>
-
-            <div class="khoi-duoi">
-                <div class="dang-chu-y">
-                    <h3>ĐÁNG CHÚ Ý</h3>
-                    <div class="khung-trong-dang-chu-y">
-                        <a href="http://genk.vn/khoa-hoc-da-tim-ra-gioi-han-suc-chiu-dung-cua-con-nguoi-vuot-qua-no-co-the-se-phai-tu-an-chinh-minh-de-hoat-dong-2019061212215203.chn">
-                            <img src="https://genknews.genkcdn.vn/zoom/380_240/2019/6/12/photo-1-15603163094271972775422-crop-15603163262561194057287.jpg" alt="">
-                        </a>
-                        
-                        <a href="http://genk.vn/khoa-hoc-da-tim-ra-gioi-han-suc-chiu-dung-cua-con-nguoi-vuot-qua-no-co-the-se-phai-tu-an-chinh-minh-de-hoat-dong-2019061212215203.chn">
-                            <h4>Khoa học đã tìm ra giới hạn sức chịu đựng của con người, vượt qua nó, cơ thể sẽ phải tự ăn chính mình để hoạt động</h4>
-                        </a>
-
-                        <a href="quen-tang-do-sang-man-hinh-apple-tuong-macbook-pro-cua-nguoi-dung-bi-hong-va-bo-ra-hon-10000-usd-de-bao-hanh-2019061212571303.chn">
-                            <p>Quên tăng độ sáng màn hình, Apple tưởng MacBook Pro của người dùng bị hỏng và bỏ ra hơn 10.000 USD để bảo hành</p>
-                        </a>
-
-                        <a href="quen-tang-do-sang-man-hinh-apple-tuong-macbook-pro-cua-nguoi-dung-bi-hong-va-bo-ra-hon-10000-usd-de-bao-hanh-2019061212571303.chn">
-                            <p>Quên tăng độ sáng màn hình, Apple tưởng MacBook Pro của người dùng bị hỏng và bỏ ra hơn 10.000 USD để bảo hành</p>
-                        </a>
-                    </div>
-                </div>
-
-
-
-                <div class="my-genk">
-                    <div class="khung-trong-my-genk">
-                        <h3>MY GENK</h3>
-                        <div class="bai-viet-to">
-                            <div>
-                                <a href="http://genk.vn/nhieu-nguoi-khong-nhan-ra-rang-apple-khong-phai-thu-do-mua-de-si-dien-ma-lai-cuc-ky-thuc-te-20190613100524015.chn">
-                                    <h4>Nhiều người không nhận ra rằng, Apple không phải thứ đồ mua để sĩ diện, mà lại cực kỳ thực tế</h4>
-                                </a>
-                                <a href="http://genk.vn/nhieu-nguoi-khong-nhan-ra-rang-apple-khong-phai-thu-do-mua-de-si-dien-ma-lai-cuc-ky-thuc-te-20190613100524015.chn">
-                                    <img src="https://genknews.genkcdn.vn/zoom/80_80/2019/6/12/ab24b2dbbe52f5d1d56d6868cea17cf2-1560395015896330774849-crop-15603950262811810635503.jpg" alt="">
-                                </a>
-                            </div>
-
-                            <div>
-                                <a href="http://genk.vn/nhieu-nguoi-khong-nhan-ra-rang-apple-khong-phai-thu-do-mua-de-si-dien-ma-lai-cuc-ky-thuc-te-20190613100524015.chn">
-                                    <h4>Nhiều người không nhận ra rằng, Apple không phải thứ đồ mua để sĩ diện, mà lại cực kỳ thực tế</h4>
-                                </a>
-                                <a href="http://genk.vn/nhieu-nguoi-khong-nhan-ra-rang-apple-khong-phai-thu-do-mua-de-si-dien-ma-lai-cuc-ky-thuc-te-20190613100524015.chn">
-                                    <img src="https://genknews.genkcdn.vn/zoom/80_80/2019/6/18/000-1hk9s9-7412-1560822918-1560829750582122484860-crop-1560829755553840232087.jpg" alt="">
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="bai-viet-nho">
-                            <a href="http://genk.vn/bang-khuyen-phong-xa-linh-vat-khong-chinh-thuc-cua-chernobyl-khac-hoa-su-hoi-sinh-cua-tu-nhien-trong-long-tham-hoa-20190617155005296.chn">
-                                <p>Bang khuyển phóng xạ: Linh vật không chính thức của Chernobyl, khắc họa sự hồi sinh của tự nhiên trong lòng thảm họa</p>
-                            </a>
-                
-                            <a href="http://genk.vn/khoa-hoc-da-tim-ra-gioi-han-suc-chiu-dung-cua-con-nguoi-vuot-qua-no-co-the-se-phai-tu-an-chinh-minh-de-hoat-dong-2019061212215203.chn">
-                                <p>Khoa học đã tìm ra giới hạn sức chịu đựng của con người, vượt qua nó, cơ thể sẽ phải tự ăn chính mình để hoạt động</p>
-                            </a>
-
-                            <a href="http://genk.vn/bang-khuyen-phong-xa-linh-vat-khong-chinh-thuc-cua-chernobyl-khac-hoa-su-hoi-sinh-cua-tu-nhien-trong-long-tham-hoa-20190617155005296.chn">
-                                <p>Bang khuyển phóng xạ: Linh vật không chính thức của Chernobyl, khắc họa sự hồi sinh của tự nhiên trong lòng thảm họa</p>
-                            </a>
-                        </div>                        
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <!-- het khoi trai -->
-
-
-        <div></div>
-    </div>
-    <!-- het noi dung -->
-
+            for (var i = 0; i < 17; i++) {
+                document.getElementsByTagName('li')[i].onclick = function() {
+                    a = this.innerHTML;
+                    console.log(a);
+                    document.getElementsByClassName('ketQua').innerHTML += a;
+                }
+            }
+        })
+    </script>
 
 </body>
 </html>
