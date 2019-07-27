@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #222;
+        }
+
+        .khung {
+            background: #aaa; 
+            border: .5px solid #222;
+            width: 400px; 
+            height: 600px;
+            margin: auto;
+            margin-top: 50px;
+            border-radius: 40px;
+            font-family: 'Segoe UI';
+            overflow: hidden;
+        }
+
+        .khung .phanTren {
+            height: 200px;
+            border-bottom: .5px solid #222; 
+            padding: 20px;
+            font-size: 55px;
+            text-align: right;
+        }
+
+        .khung .phanDuoi {
+            height: 400px;
+            overflow: hidden;
+            display: flex;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .khung .phanTren .congThuc {
+            height: 90px;
+        }
+
+        .khung .phanTren .ketQua {
+            height: 70px;
+            font-size: 40px;
+        }
+
+        .khung .phanDuoi .so {
+            height: 400px;
+            width: 300px;
+            border-right: .5px solid #222;
+            background: #444;
+        }
+
+        .khung .phanDuoi .chucNang {
+            height: 400px;
+            width: 100px;
+            background: #0084ff;
+        }
+
+        .khung .phanDuoi .so ul {
+            display: flex;
+            flex-flow: wrap;
+        }
+
+        .khung .phanDuoi .so ul li {
+            height: 80px;
+            width: 99.5px;
+            color: #ddd;
+            padding-top: 10px;
+        }
+
+        .khung .phanDuoi .chucNang ul li {
+            height: 80px;
+            width: 99.5px;
+            font-size: 40px;
+            color: #ddd;
+            border-bottom: .5px solid #3d92ca;
+            padding-top: 10px;
+        }
+
+        .khung .phanDuoi .chucNang ul li img {
+            height: 40px;
+            vertical-align: middle;
+        }
+
+        .khung .phanDuoi .so ul li img {
+            height: 40px;
+            vertical-align: middle;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="khung">
+        <div class="phanTren">
+            <div class="congThuc"></div>
+            <div class="ketQua"></div>
+        </div>
+        <div class="phanDuoi">
+            <div class="so">
+                <ul>
+                    <li>
+                        <img src="https://cdn2.iconfinder.com/data/icons/device-color/512/Untitled-3-512.png" alt="">
+                    </li>
+                    <li>
+                        <img src="https://www.freeiconspng.com/uploads/reverse-icon-8.png" alt="">
+                    </li>
+                    <li>
+                        <img src="https://cdn4.iconfinder.com/data/icons/email-2-2/32/Trash-Email-Bin-512.png" alt="">
+                    </li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>0</li>
+                    <li>.</li>
+                    <li>=</li>
+                </ul>
+            </div>
+            <div class="chucNang">
+                <ul>
+                    <li>
+                        <img src="https://cdn3.iconfinder.com/data/icons/common-3/100/ui_backspace-512.png" alt="">
+                    </li>
+                    <li>/</li>
+                    <li>*</li>
+                    <li>-</li>
+                    <li>+</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var a;
+            var so_1 = 0, so_2 = 0;
+            var lastWord;
+            var count = 0, xoa;
+            var coDauCham;
+
+            for (let i = 0; i < 20; i++) {
+                document.getElementsByTagName('li')[i].onclick = function() {
+                    console.log(i);
+                    if ((i < 14 || i > 15) && count < 12 && i > 2) {
+                        lastWord = document.getElementsByClassName('congThuc')[0].innerText[count - 1];
+
+                        if (i == 13 || i == 16 || i == 17) { //trung dau / vs * + - .
+                            if (!lastWord || lastWord == '/' || lastWord == '*' || lastWord == '.') return;
+                        }
+
+                        if (i == 13 || i == 18 || i == 19) { //trung dau . cung vs + -
+                            if (lastWord == '.') return;
+                        }
+
+                        // if (i == 13) {
+                        //     if (coDauCham) return;
+                        // }
+
+                        a = this.innerText;
+                        document.getElementsByClassName('congThuc')[0].innerText += a;
+                        count++; //cho nut xoa
+                    } 
+
+                    else if (i == 14) { //dau bang 
+                        document.getElementsByClassName('ketQua')[0].innerText = eval(document.getElementsByClassName('congThuc')[0].innerText);
+
+                        so_1 = Math.round(document.getElementsByClassName('ketQua')[0].innerText * 100) / 100; //ket qua cuoi
+                        so_2 = so_1.toString().length;
+                    } 
+
+                    else if (i == 0) { //nut on/off
+                        document.getElementsByClassName('congThuc')[0].innerText = null;
+                        document.getElementsByClassName('ketQua')[0].innerText = null;
+                        count = 0;
+                        so_1 = 0;
+                    } 
+
+                    else if (i == 1) { //nut lay gia tri cu
+                        document.getElementsByClassName('congThuc')[0].innerText += so_1;
+                        count += so_2;
+                    }
+
+                    else if (i == 2) { //nut reset all
+                        document.getElementsByClassName('congThuc')[0].innerText = null;
+                        document.getElementsByClassName('ketQua')[0].innerText = null;
+                        count = 0;
+                    }
+        
+                    else { //dau reset 1 chu
+                        xoa = document.getElementsByClassName('congThuc')[0].innerText.slice(0, count - 1);
+                        document.getElementsByClassName('congThuc')[0].innerText = xoa;
+                        count--;
+                    }
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

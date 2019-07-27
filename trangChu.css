@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+.khungChinh {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: linear-gradient(0deg ,#ecbd57 ,#00d4ff);
+    display: flex;
+}
+
+.khungChinh .hangTrai {
+    width: 20%;
+    height: 100%;
+    background-image: linear-gradient(to right ,rgb(255, 119, 70) ,rgba(255, 255, 255, 0.8));
+    opacity: 0.5;
+    overflow: hidden;
+}
+
+.khungChinh .hangPhai {
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.khungChinh .hangTrai .aboutMe {
+    height: 50%;
+
+}
+
+.khungChinh .hangTrai .aboutMe {
+    height: 50%;
+    
+}

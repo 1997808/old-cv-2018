@@ -1,0 +1,245 @@
+@import 'variables.scss';
+@import 'CSS/pageCV.scss';
+@import 'CSS/pageP.scss';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color:white;
+    text-decoration:none;
+}
+
+.khungChinh {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: $background-color3;
+    display: flex;
+    font-family: $text-font;
+    font-size: $text-font-size2;
+    color: $text-color;
+
+    .hangTrai {
+        width: 25%;
+        height: 100%;
+        background: $background-color2;
+        overflow: hidden;
+        color: $text-color;
+        z-index: 2;
+
+        .aboutMe {
+            height: 70%;
+
+            .ava {
+                display: block;
+                width: 60%;
+                height: auto;
+                border-radius: 10%;
+                margin: auto;
+                margin-top: 2em;
+                border: 5px solid #eee;
+            }
+
+            h2 {
+                padding-top: 15px;
+                text-align: center;
+                font-size: $text-font-size2;
+            }
+
+            .info {
+                font-size: $text-font-size3;
+                padding-left: 1em;
+                padding-top: 0.5em;
+
+                li {
+                    padding-top: 5px;
+                }
+                
+                img {
+                    width: 30px;
+                    height: auto;
+                    padding-right: 2px;
+                }
+            }
+
+        }
+
+        .menu {
+            height: 30%;
+
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+
+            .btn-lg {
+                padding: 2%;
+            }
+
+            .nutBack {
+                opacity: 0;
+            }
+
+            .nutNew,
+            .nutLoTrinh,
+            .nutBack {
+                transition: $transition2;
+            }
+
+            .noClick {
+                pointer-events: auto;
+            }
+
+            .noClickBack {
+                pointer-events: none;
+            }
+        }
+    }
+
+    .hangGiua {
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        background: $background-color2;
+        width: 75%;
+        height: 100%;
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: $transition;
+        z-index: 1;
+
+        .thoiGianNam {
+            width: 100%;
+            height: 20%;
+
+            ul {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+
+                li {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: $text-font-size2;
+                    color: $text-color;
+                    width: 18%;
+                    height: 72%;
+                    margin: 1%;
+                    border-radius: 5%;
+                    background: $background-color3;
+                }
+            }
+        }
+
+        .monHoc {
+            width: 100%;
+            height: 80%;
+
+            ul {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+
+                li:hover {
+                    transform: scale(1.2);
+                }
+
+                li {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: $transition3;
+                    width: 18%;
+                    height: 18%;
+                    margin: 1%;
+
+                    img {
+                        height: 100%;
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            
+        }
+    }
+
+    .hangPhai {
+        width: 75%;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        transition: $transition2;
+        
+        .slidePaper {
+            height: 60%;
+            width: 100%; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .CVbanner,
+            .Pbanner { //ve
+                background: $background-color;
+                color: $text-color2;
+                font-size: $text-font-size;
+                border-radius: 1.5em;
+                width: 25%;
+                height: 60%;
+                margin: 10%;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                animation: float 6s infinite;
+            }
+
+            @keyframes float {
+                0%   {top: 0em;}
+                50%  {top: .5em; background: $background-color2;}
+                100%  {top: 0em;}
+            }
+        }
+    }
+}
+
+
+// @media (max-width: 425px) {
+//     .khungChinh {
+
+//         .hangTrai {
+//             width: 100%;
+//             height: 75%;
+//         }
+
+//         .hangPhai {
+//             width: 100%;
+//             height: 25%;
+//         }
+
+//     } 
+// }
+
+
+
+
+

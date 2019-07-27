@@ -1,0 +1,1 @@
+body:before{white-space:pre;font-family:monospace;content:"Error: Invalid CSS after \"    transform:\": expected expression (e.g. 1px, bold), was \"}\"\A         on line 27 of D:/html-css-js test/CSS/pageCV.scss\A         from line 2 of D:\html-css-js test\style.scss\A \A 22:     width: 75%;\A 23:     height: 100%;\A 24:     right: 0;\A 25:     transform: \A 26: \A 27: }"}

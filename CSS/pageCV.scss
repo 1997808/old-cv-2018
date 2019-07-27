@@ -1,0 +1,29 @@
+@import '../variables.scss';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $text-color;
+}
+
+.pageP,
+.pageCV {
+    display: block;
+    position: absolute;
+    background: $background-color2;
+    width: 75%;
+    height: 100%;
+    right: 0;
+    transform: translateY(-100%);
+    transition: $transition;
+}
+
