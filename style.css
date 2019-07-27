@@ -57,7 +57,7 @@ a:hover {
   background: #222;
   display: flex;
   font-family: Segoe UI;
-  font-size: 2em;
+  font-size: 4.5vh;
   color: #bbb; }
   .khungChinh .hangTrai {
     width: 25%;
@@ -74,18 +74,16 @@ a:hover {
         height: auto;
         border-radius: 10%;
         margin: auto;
-        margin-top: 2em;
+        margin-top: 4.5vh;
         border: 5px solid #eee; }
       .khungChinh .hangTrai .aboutMe h2 {
         padding-top: 15px;
         text-align: center;
-        font-size: 2em; }
+        font-size: 6.5vh; }
       .khungChinh .hangTrai .aboutMe .info {
-        font-size: 1.5rem;
+        font-size: 2.5vh;
         padding-left: 1em;
-        padding-top: 0.5em; }
-        .khungChinh .hangTrai .aboutMe .info li {
-          padding-top: 5px; }
+        padding-top: 10px; }
         .khungChinh .hangTrai .aboutMe .info img {
           width: 30px;
           height: auto;
@@ -97,7 +95,7 @@ a:hover {
         width: 100%;
         height: 100%; }
       .khungChinh .hangTrai .menu .btn-lg {
-        padding: 2%; }
+        margin-top: 10px; }
       .khungChinh .hangTrai .menu .nutBack {
         opacity: 0; }
       .khungChinh .hangTrai .menu .nutNew,
@@ -131,7 +129,7 @@ a:hover {
           display: flex;
           justify-content: center;
           align-items: center;
-          font-size: 2em;
+          font-size: 4.5vh;
           color: #bbb;
           width: 18%;
           height: 72%;
@@ -176,8 +174,8 @@ a:hover {
       .khungChinh .hangPhai .slidePaper .Pbanner {
         background: #0078d7;
         color: #222;
-        font-size: 2.5em;
-        border-radius: 1.5em;
+        font-size: 8vh;
+        border-radius: 8vh;
         width: 25%;
         height: 60%;
         margin: 10%;
@@ -185,14 +183,14 @@ a:hover {
         display: flex;
         justify-content: center;
         align-items: center;
-        animation: float 6s infinite; }
+        animation: float 5s infinite; }
 @keyframes float {
   0% {
-    top: 0em; }
+    top: 0px; }
   50% {
-    top: .5em;
+    top: 4.5vh;
     background: #414141; }
   100% {
-    top: 0em; } }
+    top: 0px; } }
 
 /*# sourceMappingURL=style.css.map */

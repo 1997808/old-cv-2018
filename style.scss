@@ -50,24 +50,20 @@ a:hover {
                 height: auto;
                 border-radius: 10%;
                 margin: auto;
-                margin-top: 2em;
+                margin-top: $text-font-size2;
                 border: 5px solid #eee;
             }
 
             h2 {
                 padding-top: 15px;
                 text-align: center;
-                font-size: $text-font-size2;
+                font-size: $text-font-size;
             }
 
             .info {
-                font-size: $text-font-size3;
+                font-size: $text-font-size4;
                 padding-left: 1em;
-                padding-top: 0.5em;
-
-                li {
-                    padding-top: 5px;
-                }
+                padding-top: 10px;
                 
                 img {
                     width: 30px;
@@ -88,7 +84,7 @@ a:hover {
             }
 
             .btn-lg {
-                padding: 2%;
+                margin-top: 10px;
             }
 
             .nutBack {
@@ -177,8 +173,6 @@ a:hover {
                     }
                 }
             }
-
-            
         }
     }
 
@@ -201,8 +195,8 @@ a:hover {
             .Pbanner { //ve
                 background: $background-color;
                 color: $text-color2;
-                font-size: $text-font-size;
-                border-radius: 1.5em;
+                font-size: $text-font-size5;
+                border-radius: $text-font-size5;
                 width: 25%;
                 height: 60%;
                 margin: 10%;
@@ -210,13 +204,13 @@ a:hover {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                animation: float 6s infinite;
+                animation: float 5s infinite;
             }
 
             @keyframes float {
-                0%   {top: 0em;}
-                50%  {top: .5em; background: $background-color2;}
-                100%  {top: 0em;}
+                0%   {top: 0px;}
+                50%  {top: $text-font-size2; background: $background-color2;}
+                100%  {top: 0px;}
             }
         }
     }
